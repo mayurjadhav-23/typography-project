@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeLab | Typography Design Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital@0;1&family=Roboto+Mono&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="icon">Aa</span>
+                <h1>TypeLab</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-target="editor">Design Editor</a></li>
+                    <li><a href="#" class="nav-link" data-target="about">About Project</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>College Submission 2026</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            
+            <section id="home" class="view-section active">
+                <header class="section-header">
+                    <h2>Welcome, Scholar</h2>
+                    <p>Explore the art and science of digital typography.</p>
+                </header>
+                <div class="hero-card">
+                    <h3>Master Your Type</h3>
+                    <p>Typography is the visual component of the written word. Use our editor to experiment with weight, spacing, and font pairings.</p>
+                    <button class="btn-primary" onclick="navigateTo('editor')">Launch Editor</button>
+                </div>
+            </section>
+
+            <section id="editor" class="view-section">
+                <header class="section-header">
+                    <h2>Typography Editor</h2>
+                    <p>Manipulate text properties in real-time.</p>
+                </header>
+
+                <div class="editor-grid">
+                    <div class="control-panel">
+                        <div class="control-group">
+                            <label for="textInput">Enter Your Text</label>
+                            <textarea id="textInput" placeholder="Type something here...">Typography is the craft of endowing human language with a durable visual form.</textarea>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="fontFamily">Font Family</label>
+                            <select id="fontFamily">
+                                <option value="'Inter', sans-serif">Modern Sans (Inter)</option>
+                                <option value="'Playfair Display', serif">Elegant Serif (Playfair)</option>
+                                <option value="'Roboto Mono', monospace">Technical (Mono)</option>
+                                <option value="'Montserrat', sans-serif">Bold Geometric (Montserrat)</option>
+                            </select>
+                        </div>
+
+                        <div class="grid-2-col">
+                            <div class="control-group">
+                                <label for="fontSize">Size (<span id="sizeVal">40</span>px)</label>
+                                <input type="range" id="fontSize" min="12" max="120" value="40">
+                            </div>
+                            <div class="control-group">
+                                <label for="textColor">Text Color</label>
+                                <input type="color" id="textColor" value="#2d3436">
+                            </div>
+                        </div>
+
+                        <div class="grid-2-col">
+                            <div class="control-group">
+                                <label for="letterSpacing">Spacing (<span id="spaceVal">0</span>px)</label>
+                                <input type="range" id="letterSpacing" min="-5" max="20" value="0">
+                            </div>
+                            <div class="control-group">
+                                <label for="lineHeight">Line Height</label>
+                                <input type="range" id="lineHeight" min="0.8" max="2.5" step="0.1" value="1.2">
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <button id="resetBtn" class="btn-secondary">Reset</button>
+                            <button id="downloadBtn" class="btn-primary">Print View</button>
+                        </div>
+                    </div>
+
+                    <div class="preview-panel">
+                        <div class="preview-badge">Live Preview</div>
+                        <div id="textPreview" class="preview-box">
+                            Typography is the craft of endowing human language with a durable visual form.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="view-section">
+                <header class="section-header">
+                    <h2>About This Project</h2>
+                </header>
+                <div class="about-content">
+                    <p>This project was developed for a Web Development submission. It focuses on <strong>DOM Manipulation</strong> and <strong>CSS3 Flexbox/Grid</strong> layouts.</p>
+                    <ul class="feature-list">
+                        <li>Real-time Style Updates</li>
+                        <li>Clean UI/UX Design</li>
+                        <li>Responsive Dashboard Layout</li>
+                        <li>Vanilla JavaScript Architecture</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
